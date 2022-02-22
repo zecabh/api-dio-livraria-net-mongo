@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
 
 namespace livrariaDIOAPI.Models
 {
     public class ProdutoDTO
     {
-        [Key]
-        public string _Id { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? _Id { get; set; }
 
         public string Nome { get; set; }
 

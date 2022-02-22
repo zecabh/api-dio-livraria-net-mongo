@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace livrariaDIOAPI.Data.Collections
 {
@@ -9,7 +7,7 @@ namespace livrariaDIOAPI.Data.Collections
     {
         public Produto(string id, string nome, double preco, int quantidade, string categoria, string img)
         {
-            this.Id = id;
+            this._Id = id;
             this.Nome = nome;
             this.Preco = preco;
             this.Quantidade = quantidade;
@@ -17,7 +15,9 @@ namespace livrariaDIOAPI.Data.Collections
             this.Img = img;
         }
 
-        public string Id { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? _Id { get; set; }
 
         public string Nome { get; set; }
         

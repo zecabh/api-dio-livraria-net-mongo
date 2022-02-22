@@ -22,35 +22,32 @@ namespace livraria.Controllers
 
 
         [HttpPost]
-        //public async Task<ActionResult> InserirProduto([FromBody] Produto prod)
-        
-        public ActionResult InserirProduto([FromBody] ProdutoDTO prod)
+        public async Task<IActionResult> InserirProduto([FromBody] ProdutoDTO prod)
         {
-
             var produto =  new Produto(prod._Id, prod.Nome, prod.Preco, prod.Quantidade, prod.Categoria, prod.Img);
 
-            _produtosCollection.InsertOne(produto);
+            await _produtosCollection.InsertOneAsync(produto);
 
-            return StatusCode(201, "Livro adicionado com sucesso!");
+            return StatusCode(201, "Livro adicionado com sucesso!");           
         }
-
 
 
         // GET: api/Livraria
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Produto>>> GetProdutos()
+        public async Task<IActionResult> GetProdutos()
         {
-            return await _produtosCollection.Find(Builders<Produto>.Filter.Empty).ToListAsync();
+            var produtos = await _produtosCollection.Find(Builders<Produto>.Filter.Empty).ToListAsync();
+
+            return Ok(produtos);
         }
 
-
-        [HttpGet("{id}")]
+        [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Produto>> GetProdutoPorId(string id)
         {
 
-            var filter = Builders<Produto>.Filter.Eq(x => x.Id, id);
+            var filter = Builders<Produto>.Filter.Eq(x => x._Id, id);
 
-            var produto = await _produtosCollection.Find(filter).SingleAsync();
+            var produto = await _produtosCollection.Find(filter).FirstOrDefaultAsync();
 
             if (produto == null) 
             {
@@ -62,23 +59,22 @@ namespace livraria.Controllers
 
 
         // DELETE: api/Livraria
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> DeleteProduto(string id)
         {
+            var filter = Builders<Produto>.Filter.Eq(x => x._Id, id);
 
-            var filter = Builders<Produto>.Filter.Eq(x => x.Id, id);
-
-            var produto = await _produtosCollection.Find(filter).SingleAsync();
+            var produto = await _produtosCollection.Find(filter).FirstOrDefaultAsync();
 
             if (produto == null)
             {
                 return NotFound();
             }
 
-            _produtosCollection.DeleteOne(filter);
+            await _produtosCollection.DeleteOneAsync(filter);
 
             return StatusCode(201, "Livro excluido com sucesso!");
-        }
+        }  
 
     }
 }
