@@ -21,7 +21,8 @@ Integração da API ao Azure API.
 Segurança: Implantação da conexão do banco de dados ao Azure Key Vault.
 
 01/03/2022
-Criação da model/controller (Editora)
+Criação da model/controller (Editora);
+Integração da API ao Azure API para deploy automatico.
 
 ## Contato
 
