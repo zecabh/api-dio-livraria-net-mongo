@@ -4,13 +4,13 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace livrariaDIOAPI.Models
 {
-    public class ProdutoDTO
+    public class LivroDTO
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? _Id { get; set; }
 
-        public string Nome { get; set; }
+        public string NomeLivro { get; set; }
 
         public double Preco { get; set; }
 
@@ -19,5 +19,9 @@ namespace livrariaDIOAPI.Models
         public string Categoria { get; set; }
 
         public string Img { get; set; }
+
+        public string _IdEditora { get; set; }
+
+        public virtual EditoraDTO Editora { get; set; }
     }
 }

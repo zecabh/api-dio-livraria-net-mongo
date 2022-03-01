@@ -3,9 +3,9 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace livrariaDIOAPI.Data.Collections
 {
-    public class Produto
+    public class Livro
     {
-        public Produto(string id, string nome, double preco, int quantidade, string categoria, string img)
+        public Livro(string id, string nome, double preco, int quantidade, string categoria, string img, string idEditora)
         {
             this._Id = id;
             this.Nome = nome;
@@ -13,6 +13,7 @@ namespace livrariaDIOAPI.Data.Collections
             this.Quantidade = quantidade;
             this.Categoria = categoria;
             this.Img = img;
+            this._IdEditora = idEditora;
         }
 
         [BsonId]
@@ -28,5 +29,8 @@ namespace livrariaDIOAPI.Data.Collections
         public string Categoria { get; set; }
 
         public string Img { get; set; }
+
+        public string _IdEditora { get; set; }
+        public virtual Editora Editora { get; set; }
     }
 }

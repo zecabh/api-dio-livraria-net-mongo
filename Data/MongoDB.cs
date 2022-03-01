@@ -31,9 +31,9 @@ namespace livrariaDIOAPI.Data
             var conventionPack = new ConventionPack { new CamelCaseElementNameConvention() };
             ConventionRegistry.Register("camelCase", conventionPack, t => true);
 
-            if (!BsonClassMap.IsClassMapRegistered(typeof(Produto)))
+            if (!BsonClassMap.IsClassMapRegistered(typeof(Livro)))
             {
-                BsonClassMap.RegisterClassMap<Produto>(i =>
+                BsonClassMap.RegisterClassMap<Livro>(i =>
                 {
                     i.AutoMap();
                     i.SetIgnoreExtraElements(true);

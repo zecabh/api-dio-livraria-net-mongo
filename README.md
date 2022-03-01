@@ -4,14 +4,24 @@ Criação de uma API .NET CORE
 
 ## Além do projeto original de API proposto, foi incluído:
 
+09/02/2022
 Integração ao banco de dados NoSQL MongoDB para armazenamento dos dados;
 
 No controller os métodos: 
+*[HttpGet("{id}")] (GET POR ID), onde busca o livro pelo ID informado; 
+*[HttpDelete("{id}")] (DELETE POR ID), onde deleta o livro pelo ID informado;
 
-*[HttpGet("{id}")] (GET POR ID), onde busca o usuário pelo ID informado; 
+14/02/2022
+*[HttpPut("{id}")] (UPDATE POR ID), onde atualiza o livro pelo ID informado.
 
-*[HttpDelete("{id}")] (DELETE POR ID), onde deleta o usuario pelo ID informado;
+17/02/2022
+Integração da API ao Azure API.
 
+23/02/2022
+Segurança: Implantação da conexão do banco de dados ao Azure Key Vault.
+
+01/03/2022
+Criação da model/controller (Editora)
 
 ## Contato
 

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/dio-livraria-vault",
+      "type": "secrets.keyVault",
+      "connectionId": "7e5c85cf-4f38-42c8-8054-dc7507930a63",
+      "secretStore": null
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets",
+      "connectionId": "7e5c85cf-4f38-42c8-8054-dc7507930a63"
+    }
+  }
+}

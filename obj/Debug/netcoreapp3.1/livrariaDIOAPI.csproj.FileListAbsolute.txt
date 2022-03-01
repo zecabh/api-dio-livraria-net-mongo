@@ -150,3 +150,11 @@ C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.
 C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\Azure.Identity.dll
+C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
+C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
+C:\Users\zecab\source\repos\livrariaDIOAPI\livrariaDIOAPI\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
